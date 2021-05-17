@@ -13,8 +13,7 @@ autoposter = db_x["AutoPoster"]
 
 async def add_new_autopost(to_channel, target_channel):
     await autoposter.insert_one(
-        {"target_channel": int(target_channel), "to_channel": int(to_channel)}
-    caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>" + "\ngroup :https://t.me/cinemahub_boss") 
+        {"target_channel": int(target_channel), "to_channel": int(to_channel)} 
     )
 
 async def check_if_autopost_in_db(to_channel, target_channel):
